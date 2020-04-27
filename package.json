@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-wasm": "cargo build --target wasm32-unknown-unknown",
     "build-bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/react_rust_wasm.wasm --out-dir build",
-    "build": "npm run build-wasm && npm run build-bindgen && npx webpack",
+    "build:dev": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=development",
+    "build:stg": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=staging",
+    "build:prod": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=production",
     "start": "webpack-dev-server --mode development"
   },
   "repository": {

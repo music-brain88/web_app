@@ -9,5 +9,5 @@ extern {
 
 #[wasm_bindgen]
 pub fn big_computation() {
-    alert("Big computation in Rust");
+    alert("Big computation in Rust!!!");
 }
