@@ -16,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/music-brain88/web_app/issues"
   },
-  "homepage": "https://github.com/music-brain88/web_app#readme"
+  "homepage": "https://github.com/music-brain88/web_app#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
 }
