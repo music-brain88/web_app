@@ -8,3 +8,6 @@ edition = "2018"
 
 [dependencies]
 actix = "0.9.0"
+actix-web = "2.0.0"
+openssl = "0.10.29"
+actix-rt = "1.1.0"
