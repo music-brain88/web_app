@@ -9,6 +9,10 @@ wasm.then(wasm => {
       <div>
         <h1>Hi there</h1>
         <button onClick={wasm.big_computation}>Run Computation</button>
+        <div>
+          <h2> sample</h2>
+          <button onClick={wasm.sample}>Run Computation</button>
+        </div>
       </div>
     );
   };

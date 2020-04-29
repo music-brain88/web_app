@@ -10,7 +10,7 @@
     "build:dev": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=development",
     "build:stg": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=staging",
     "build:prod": "npm run build-wasm && npm run build-bindgen && npx webpack --mode=production",
-    "start": "webpack-dev-server --mode development"
+    "start:dev": "webpack-dev-server --mode development --hot --inline --progress --history-api-fallback"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,10 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.19.0",
+    "file-loader": "^6.0.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"

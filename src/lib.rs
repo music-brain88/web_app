@@ -11,3 +11,8 @@ extern {
 pub fn big_computation() {
     alert("Big computation in Rust!!!");
 }
+
+#[wasm_bindgen]
+pub fn sample() {
+    alert("Rust!!!");
+}

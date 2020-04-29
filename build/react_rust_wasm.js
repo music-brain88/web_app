@@ -23,6 +23,12 @@ export function big_computation() {
     wasm.big_computation();
 }
 
+/**
+*/
+export function sample() {
+    wasm.sample();
+}
+
 export const __wbg_alert_e3f8b32a72cc3799 = function(arg0, arg1) {
     alert(getStringFromWasm0(arg0, arg1));
 };

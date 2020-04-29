@@ -8,7 +8,9 @@ module.exports = (env, argv) => ({
     path: outputPath
   },
   devServer: {
-    contentBase: outputPath
+    contentBase: outputPath,
+    watchContentBase: true,
+    port: 3000
   },
   module: {
     rules: [
@@ -18,6 +20,12 @@ module.exports = (env, argv) => ({
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
       }
     ]
   }
