@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Button } from '@material-ui/core';
+
+import HeaderComponent from './components/header'
 
 const wasm = import("../build/react_rust_wasm");
 
@@ -8,14 +11,10 @@ wasm.then(wasm => {
     return (
       <div>
         <h1>Hi there</h1>
-        <button onClick={wasm.big_computation}>Run Computation</button>
-        <div>
-          <h2> sample</h2>
-          <button onClick={wasm.sample}>Run</button>
-        </div>
+        <Button variant="contained" color="primary" onClick={wasm.big_computation}>Run Computation</Button>
+        <HeaderComponent />
       </div>
     );
   };
-
   ReactDOM.render(<App />, document.getElementById("root"));
 });

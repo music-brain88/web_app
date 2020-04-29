@@ -28,5 +28,8 @@ module.exports = (env, argv) => ({
         loader: 'eslint-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   }
 });
