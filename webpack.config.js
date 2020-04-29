@@ -1,8 +1,15 @@
 const path = require("path");
 const outputPath = path.resolve(__dirname, "dist");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const entryPoint = {
+  js: './src/index.js',
+}
 
 module.exports = (env, argv) => ({
-  entry: "./src/index.js",
+  entry: {
+    js: entryPoint.js,
+  },
   output: {
     filename: "bundle.js",
     path: outputPath
@@ -26,10 +33,29 @@ module.exports = (env, argv) => ({
         enforce: 'pre',
         exclude: /node_modules/,
         loader: 'eslint-loader'
+      },
+      {
+        test: /\.(sc|sa|c)ss$/,
+        use:[
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ]
       }
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+    filename: 'dist/css/main.css'
+  })
+  ],
   resolve: {
     extensions: ['.js', '.jsx'],
-  }
+  } 
 });
