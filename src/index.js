@@ -11,7 +11,7 @@ wasm.then(wasm => {
         <button onClick={wasm.big_computation}>Run Computation</button>
         <div>
           <h2> sample</h2>
-          <button onClick={wasm.sample}>Run Computation</button>
+          <button onClick={wasm.sample}>Run</button>
         </div>
       </div>
     );
