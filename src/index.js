@@ -9,7 +9,7 @@ const wasm = import("../build/react_rust_wasm");
 wasm.then(wasm => {
   const App = () => {
     return (
-      <div>
+      <div> 
         <HeaderComponent />
         <h1>Hi there</h1>
         <Button variant="contained" color="primary" onClick={wasm.big_computation}>Run Computation</Button>

@@ -1,22 +1,24 @@
 import React, {Component} from "react";
+import { css } from 'emotion';
 import { Grid } from '@material-ui/core';
 
-import styles from '../assets/main.css';
+const myStyle = css({
+  color: 'red',
+  fontSize: '20pt'
+});
 
 export default class HeaderComponent extends Component {
     render() {
       return (
-        <div className={styles.sample}>
-        {styles.sample}
         <Grid
         container
         direction="row"
         justify="center"
         alignItems="center"
+        className={myStyle}
         >
         HEADER
         </Grid>
-        </div>
       )
     }
 }
